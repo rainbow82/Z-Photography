@@ -1,0 +1,91 @@
+/*********************
+Additional button styles
+**********************/
+
+
+
+.btn-rounded {
+    @include border-radius(10em);
+}
+.btn-border-default {
+   background-color: transparent;
+    border: 2px solid $default-color;
+    color: $default-color-dark;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $default-color;
+    }
+}
+.btn-border-primary {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color-dark;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $primary-color;
+    }
+}
+.btn-border-success {
+   background-color: transparent;
+    border: 2px solid $success-color;
+    color: $success-color-dark;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $success-color;
+    }
+}
+.btn-border-info {
+   background-color: transparent;
+    border: 2px solid $info-color;
+    color: $info-color-dark;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $info-color;
+    }
+}
+.btn-border-warning {
+    background-color: transparent;
+    border: 2px solid $warning-color;
+    color: $warning-color-dark;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $warning-color;
+    }
+}
+.btn-border-danger {
+    background-color: transparent;
+    border: 2px solid $danger-color;
+    color: $danger-color-dark;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $danger-color;
+    }
+}
+
+.btn-border-light {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: #fff;
+    }
+}
+
+.btn-border-dark {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #000;
+    color: #fff ;
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+    }
+}

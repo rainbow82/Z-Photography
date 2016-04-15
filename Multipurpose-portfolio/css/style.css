@@ -1,0 +1,163 @@
+/*!
+ *
+ *
+ * Material Design for Bootstrap
+ * www.mdbootstrap.com
+ *
+ *
+ */
+/*********************
+  Mixins
+**********************/
+/*!
+ *
+ *
+ * Material Design for Bootstrap
+ * www.mdbootstrap.com
+ *
+ *
+ */
+/*********************
+  VARIABLES
+**********************/
+/*********************
+  GENERAL
+**********************/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2E2E2E;
+}
+
+/*********************
+  BASIC CONSTRUCTION
+**********************/
+main,
+footer,
+.full-bg-img {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width: 992px) {
+  main,
+  footer,
+  .full-bg-img {
+    padding-left: 0;
+  }
+}
+
+/* Main wrapper */
+.main-wrapper {
+  margin-top: 20px;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .main-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .main-wrapper {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .main-wrapper {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1400px) {
+  .main-wrapper {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+}
+
+/*********************
+  MAIN IMAGE
+**********************/
+.full-bg-img {
+  background: url("../img/louisville_in_the_distance%20(1).jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 101%;
+}
+
+/*********************
+  TEMPLATE COLORS
+**********************/
+.pt-color {
+  background-color: #4F0269 !important;
+}
+
+.st-color {
+  background-color: #1C2331 !important;
+}
+
+.et-color {
+  background-color: #3F729B !important;
+}
+
+.btn-ptc {
+  background-color: #212121 !important;
+}
+
+.btn-ptc:hover {
+  background-color: #3b3b3b !important;
+}
+
+.btn-ptc:focus {
+  background-color: #3b3b3b !important;
+}
+
+.btn-stc {
+  background-color: #1C2331 !important;
+}
+
+.btn-stc:hover {
+  background-color: #2f3a51 !important;
+}
+
+.btn-stc:focus {
+  background-color: #2f3a51 !important;
+}
+
+.btn-etc {
+  background-color: #3F729B !important;
+}
+
+.btn-etc:hover {
+  background-color: #548cb9 !important;
+}
+
+.btn-etc:focus {
+  background-color: #548cb9 !important;
+}
+
+/*********************
+  COMPONENTS
+**********************/
+.button-collapse {
+  position: fixed;
+  color: #fff;
+  z-index: 999;
+}
+
+
+.dark-side-nav .logo-wrapper{
+    background: none;
+}

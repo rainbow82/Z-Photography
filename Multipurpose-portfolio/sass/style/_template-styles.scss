@@ -1,0 +1,148 @@
+/*!
+ *
+ *
+ * Material Design for Bootstrap
+ * www.mdbootstrap.com
+ *
+ *
+ */
+
+/*********************
+  VARIABLES
+**********************/
+
+$primary-tem-color: #4F0269;
+$secondary-tem-color: #1C2331;
+$extra-tem-color: #3F729B;  
+
+/*********************
+  GENERAL
+**********************/
+html,
+body {
+  height: 100%;
+    margin: 0; 
+    padding: 0;
+    background-color: #2E2E2E;
+}
+
+/*********************
+  BASIC CONSTRUCTION
+**********************/
+main,
+footer,
+.full-bg-img {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width: 992px) {
+  main,
+footer,
+.full-bg-img {
+    padding-left: 0;
+  }
+}
+
+/* Main wrapper */
+.main-wrapper {
+  margin-top: 20px;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .main-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .main-wrapper {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .main-wrapper {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1400px) {
+  .main-wrapper {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+}
+
+/*********************
+  MAIN IMAGE
+**********************/
+.full-bg-img {  
+    background: url("../img/louisville_in_the_distance.jpg") no-repeat center center fixed;  
+    -webkit-background-size: cover;
+    -moz-background-size: cover; 
+    -o-background-size: cover;
+    background-size: cover;
+    height: 101%;
+}
+
+/*********************
+  TEMPLATE COLORS
+**********************/
+
+.pt-color {
+    background-color: $primary-tem-color!important;
+}
+
+.st-color {
+    background-color: $secondary-tem-color!important;
+}
+
+.et-color {
+    background-color: $extra-tem-color!important;
+}
+
+.btn-ptc {
+    background-color: $primary-tem-color!important;
+    &:hover {
+        background-color: lighten($primary-tem-color, 10%)!important;
+    }
+    &:focus {
+        background-color: lighten($primary-tem-color, 10%)!important;
+    }
+}
+
+.btn-stc {
+    background-color: $secondary-tem-color!important;
+    &:hover {
+        background-color: lighten($secondary-tem-color, 10%)!important;
+    }
+    &:focus {
+        background-color: lighten($secondary-tem-color, 10%)!important;
+    }
+}
+
+.btn-etc {
+    background-color: $extra-tem-color!important;
+    &:hover {
+        background-color: lighten($extra-tem-color, 10%)!important;
+    }
+    &:focus {
+        background-color: lighten($extra-tem-color, 10%)!important;
+    }
+}
+/*********************
+  COMPONENTS
+**********************/
+.button-collapse {
+    position: fixed;
+    color: #fff;
+    z-index: 999;
+}
