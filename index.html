@@ -1,75 +1,487 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Z Photography</title>
-    <!-- Latest compiled and minified CSS -->
-   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>    
-<body>
- 
-<div class="column_left">    
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="#"><img alt="Brand" src="img/logo.jpg"></a>                
-        </div>
+    
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PHOTOGRAPHY <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-               <li><a href="portrait.html">PORTRAIT</a></li>
-                <li><a href="family.html">FAMILY</a></li>
-                <li><a href="landscape.html">LANDSCAPE</a></li>
-                <li><a href="concert.html">CONCERT</a></li>
-                <li><a href="abstract.html">ABSTRACT</a></li>
-                <li><a href="goth.html">GOTH</a></li>
-              </ul>
-            </li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-</div>
 
-<div class="column_right">   
-    <div class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="img/abstract/abstract_1.jpg">
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap --><link href="css/mdb.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/style.css" rel="stylesheet"><link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+    
+    <!-- Socicon-->
+    <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+</head>
+
+<style>
+    /*********************
+  TILED GALLERY IMAGES
+**********************/
+    
+    .portfolio .tile-1 {
+        background-image: url("img/mainPage_imgs/abstract1.jpg");
+    }
+    
+    .portfolio .tile-2 {
+        background-image: url("img/mainPage_imgs/concerts1.jpg");
+    }
+    
+    .portfolio .tile-3 {
+        background-image: url("img/mainPage_imgs/family1.jpg");
+    }
+    
+    .portfolio .tile-4 {
+        background-image: url("img/mainPage_imgs/goth1.jpg");
+    }
+    
+    .portfolio .tile-5 {
+        background-image: url("img/mainPage_imgs/landscape1.jpg");
+    }
+    
+    .portfolio .tile-6 {
+        background-image: url("img/mainPage_imgs/portrait1.jpg");
+    }
+    
+</style>
+
+<!-- Modal: Contact form -->
+<div class="modal fade" id="contact-form" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">Write to us </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="col-md-12">
+                        <p>I like to receive a messages</p>
+                        <br>
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="contact-name" type="text" class="validate">
+                            <label for="contact-name">Your name</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="contact-mail" type="tel" class="validate">
+                            <label for="contact-mail">Your e-mail</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">label</i>
+                            <input id="contact-subject" type="text" class="validate">
+                            <label for="contact-subject">Subject</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="contact-text" class="materialize-textarea"></textarea>
+                            <label for="contact-text">Message</label>
+                        </div>
+                    </form>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-etc waves-effect waves-light">Send</button>
+                    </div>
                 </div>
-                
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-ptc" data-dismiss="modal">X</button>
             </div>
         </div>
+
     </div>
-        
-</div>     
-        <footer>
-        </footer>
-    </div>    
-<!-- JQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</div>
+<!--/.Modal: Contact form-->
 
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="http://mdbootstrap.com/mdbcdn/mdb.min.js"></script>  
-</body> 
-</html>    
+<body>
+
+    <!-- SideNav slide-out button -->
+    <a href="#" data-activates="slide-out" class="navbar-brand button-collapse rgba-black-strong"><i class="material-icons">menu</i></a>
+    <!--/. SideNav slide-out button -->
+
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed personal-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper hidden-xs">
+            <a href="#home" class="waves-effect waves-light">
+                <div class="avatar-wrapper">
+                    <img src="img/hip_photographoer_guy.jpg" class="img-responsive img-circle">
+                </div>
+            </a>
+        </div>
+        <!--/. Logo -->
+
+        <!--About-->
+        <div class="about hidden-xs">
+            <p>"Our virtues and our failings are inseparable, like force and matter. When they separate, man is no more." Nikola Tesla </p>
+        </div>
+        <!--/.About-->
+
+        <!--Social-->
+        <ul class="social list-inline text-center">
+            <li class="waves-effect waves-light"><a href="https://www.facebook.com/Z-Photography-306612531077" target="_blank" class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+            <li class="waves-effect waves-light"><a href="http://www.modelmayhem.com/1627729" target="_blank" ><i class="socicon-modelmayhem"> </i></a></li>
+            
+        </ul>
+        <!--/.Social-->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><a href="#about-me" class="waves-effect waves-light">About me</a></li>
+            <li><a href="#best-pictures" class="waves-effect waves-light">My Best work</a></li>
+            <li><a href="#categories" class="waves-effect waves-light">Categories</a></li>
+            <li><a href="#projects" class="waves-effect waves-light">Projects</a></li>
+            <li><a href="#contact" class="waves-effect waves-light">Contact</a></li>
+            <li><a href="#footer" class="waves-effect waves-light">Social</a></li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!-- Intro image -->
+    <section class="full-bg-img" id="home">
+        <div class="verticalcenter">
+            <div class="text-center">
+                <a href="#about-me" class="btn btn-border-dark btn-xlg waves-effect waves-light wow fadeIn" data-wow-delay="0.2s">My work <i class="fa fa-arrow-down"></i></a>
+                <a href="#contact" class="btn btn-border-dark btn-xlg waves-effect waves-light wow fadeIn" data-wow-delay="0.4s">Contact me <i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--/. Intro image -->
+
+    <!--Main container-->
+    <div class="container-fluid">
+        <main>
+
+            <!--Section: About me-->
+            <section id="about-me">
+                <div class="row">
+                    <div class="col-md-12 card-panel no-margin elegant-color-dark wow fadeInUp">
+
+                        <!--Text-->
+                        <div class="row">
+                            <div class="text-center white-text">
+                                <div class="col-md-6 col-sm-offset-3">
+                                    <h4>About me</h4>
+                                    <p>Greetings one and all, and welcome to my site. For those who don’t know me, my name is Zoran and it’s nice to meet you. If I do seem familiar, it’s probably because you know me better with half of my face being behind a camera. </p>
+                                    <br>
+                                    <p>I have been doing photography for almost ten years. I started in 2006 with taking pictures at a local Goth hangout. Once I was old enough (21), and could get into different bars and clubs, I was able to expand my networking and get a different type of an experience. Since then I have been to many local hangouts, clubs, and concerts, as well as some out of the city and state.</p>
+                                    <br>
+                                    <p>I have been lucky to have encountered some wonderful people, and been lucky enough to have photographed some of my favorite bands. </p>
+                                    <br>
+                                    <p>All of my Photography is originally taken and edited by me. I do all types and styles of photography. Special charges may be applied depending on the job.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.Text-->
+
+                        <!--Features-->
+                        <div class="row">
+                            <!--First column-->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="elegant-card z-depth-1 hoverable wow slideInUp">
+                                    <!-- Image wrapper -->
+                                    <div class="view overlay hm-blue-slight">
+                                        <img src="img/Quotes/michelle_mcdonald.jpg" class="img-responsive" alt="">
+                                        <div class="mask waves-effect"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>"Zoran always makes me feel beautiful and captures a side of me no one else sees." - Michelle McDonald</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.First column-->
+
+                            <!--Second column-->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="elegant-card z-depth-1 hoverable wow slideInUp" data-wow-delay="0.2s">
+                                    <!-- Image wrapper -->
+                                    <div class="view overlay hm-blue-slight">
+                                        <img src="img/Quotes/Theresa-Joe.jpg" class="img-responsive" alt="">
+                                        <div class="mask waves-effect"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>"I rarely shoot with male photographers, but I was immediately at ease with you! And it was incredibly fun! I loved every picture you took - another rarity for me as I am extremely self-critical. It was a pleasure shooting with you, and I'm looking forward to the next time!" - Theresa Joe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Second column-->
+
+                            <!--Third column-->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="elegant-card z-depth-1 hoverable wow slideInUp" data-wow-delay="0.4s">
+                                    <!-- Image wrapper -->
+                                    <div class="view overlay hm-blue-slight">
+                                        <img src="img/Quotes/Ashley-Radcliffe.jpg" class="img-responsive" alt="">
+                                        <div class="mask waves-effect"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>"I always enjoy you taking pictures of me. Always have a fun time, and you bring out the best side of anybody, plus your editing Is Awesome. You always make me look pretty. You have an eye for great lighting and great angles" - Ashley Radcliffe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Third column-->
+
+                            <!--Fourth column-->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="elegant-card z-depth-1 hoverable wow slideInUp" data-wow-delay="0.6s">
+                                    <!-- Image wrapper -->
+                                    <div class="view overlay hm-blue-slight">
+                                        <img src="img/Quotes/Saphire.jpg" class="img-responsive" alt="">
+                                        <div class="mask waves-effect"></div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>"I felt comfortable with you (which isn't often), you give direction (not a lot do), and you capture a glimpse of the real me." - Saphire Dahmer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Fourth column-->
+                        </div>
+                        <!--/.Features-->
+
+                    </div>
+                </div>
+            </section>
+            <!--/.Section: About me-->
+
+            <!--Section: Best Pictures-->
+            <section id="best-pictures">
+
+                <!--Title-->
+                <div class="row">
+                    <div class="col-md-12 card-panel no-margin elegant-color-dark hoverable wow slideInUp">
+                        <div class="text-center white-text">
+                            
+                                <h4>More best work</h4>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!--/.Title-->
+
+                <!--Gallery-->
+                <div class="row no-gutter">
+                    <div class="col-md-12 no-gutter">
+                        <div class="col-md-4 portfolio-item wow fadeInUp">
+                            <img class="materialboxed center-block responsive-img" 
+                            src="img/moreBestWork/duet.jpg">
+                        </div>
+                        <div class="col-md-4 portfolio-item wow fadeInUp" data-wow-delay="0.2s">
+                            <img class="materialboxed center-block responsive-img" 
+                            src="img/moreBestWork/log_believe.jpg">
+                        </div>
+                        <div class="col-md-4 portfolio-item wow fadeInUp" data-wow-delay="0.4s">
+                            <img class="materialboxed center-block responsive-img" 
+                            src="img/moreBestWork/baby_blackWhite.jpg">
+                        </div>
+                        <div class="col-md-4 portfolio-item wow fadeInUp">
+                            <img class="materialboxed center-block responsive-img" 
+                            src="img/moreBestWork/darthVader_Bane.jpg">
+                        </div>
+                        <div class="col-md-4 portfolio-item wow fadeInUp" data-wow-delay="0.2s">
+                            <img class="materialboxed center-block responsive-img" 
+                            src="img/moreBestWork/bridge.jpg">
+                        </div>
+                        <div class="col-md-4 portfolio-item wow fadeInUp" data-wow-delay="0.4s">
+                            <img class="materialboxed center-block responsive-img" 
+                            src="img/moreBestWork/heart.jpg">
+                        </div>
+                    </div>
+                </div>
+                <!--/.Gallery-->
+
+            </section>
+            <!--/.Section: Best Pictures-->
+
+            <!--Section: Categories-->
+            <section id="categories">
+                <!--Title-->
+                <div class="row">
+                    <div class="col-md-12 card-panel no-margin elegant-color-dark hoverable wow slideInUp">
+                        <div class="text-center white-text">
+                            
+                                <h4>More of my work</h4>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Title-->
+
+                <!--Gallery-->
+                <div class="tiled-gallery portfolio">
+                    <div class="row no-gutter">
+                        <div class="col-md-12">
+                            <div class="col-md-6 wow fadeInUp">
+                                <div class="tile tile-1 view overlay hm-blue-light z-depth-2"><a href="abstract.html" class="waves-effect waves-light"><h5 class="title">Abstract</h5><div class="mask"></div></a></div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="tile tile-2 view overlay hm-blue-light z-depth-2"><a href="concerts.html" class="waves-effect waves-light"><h5 class="title">Concerts/Events</h5><div class="mask"></div></a></div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="tile tile-3 view overlay hm-blue-light z-depth-2"><a href="family.html" class="waves-effect waves-light"><h5 class="title">Family</h5><div class="mask"></div></a></div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeInUp">
+                                <div class="tile tile-4 view overlay hm-blue-light z-depth-2"><a href="goth.html" class="waves-effect waves-light"><h5 class="title">Goth</h5><div class="mask"></div></a></div>
+                            </div>
+
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="tile tile-5 view overlay hm-blue-light z-depth-2"><a href="landscape.html" class="waves-effect waves-light"><h5 class="title">Landscape</h5><div class="mask"></div></a></div>
+                            </div>
+
+                            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="tile tile-6 view overlay hm-blue-light z-depth-2"><a href="portrait.html" class="waves-effect waves-light"><h5 class="title">Portrait</h5><div class="mask"></div></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Gallery-->
+
+            </section>
+            <!--/.Section: Categories-->
+
+            <!--Section: Contact-->
+            <section id="contact">
+                <!--Title-->
+                <div class="row">
+                    <div class="col-md-12 card-panel no-margin elegant-color-dark wow slideInUp">
+                        <div class="text-center white-text">
+                           
+                                <h4>Contact me</h4>
+                           
+                        </div>
+                    </div>
+                </div>
+                <!--/.Title-->
+
+                <div class="space-50"></div>
+                <div class="space-50"></div>
+
+                <!-- Main forms row -->
+                <div class="row wow fadeIn">
+                    <div class="col-md-7 col-xs-offset-1">
+                        <div id="map-container" class="card-panel hoverable wow fadeInUp" style="height: 300px"></div>
+                    </div>
+                    <!-- Contact details -->
+                    <div class="col-md-4 text-center white-text">
+
+                        <ul class="contact-data">
+                            <li class="wow fadeInUp" data-wow-delay="0.2s"><a class="btn-floating btn-small waves-effect waves-light blue-grey"><i class="material-icons">pin_drop</i></a>
+                                <p>Louisville, KY USA</p>
+                            </li>
+
+                            <li class="wow fadeInUp" data-wow-delay="0.4s"><a class="btn-floating btn-small waves-effect waves-light blue-grey" data-toggle="modal" data-target="#contact-form"><i class="material-icons">email</i></a>
+                                <p>zorancuckovic@yahoo.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/. Main row -->
+
+            </section>
+            <!--Section: Contact-->
+
+        </main>
+    </div>
+    <!--/.Main container-->
+
+    <!--Section: Footer-->
+    <footer class="page-footer elegant-color-dark" id="footer">
+        <!--Footer Content-->
+        <div class="container-fluid footer-content">
+            <div class="row text-center wow fadeIn">
+                <h4 class="white-text wow fadeIn">Find me on social media</h4>
+                <a href="https://www.facebook.com/Z-Photography-306612531077" class="btn-sm-full fb-bg rectangle waves-effect waves-light wow fadeInUp"><i class="fa fa-facebook"> </i> <span>Facebook</span> </a>
+                
+                <a href="http://www.modelmayhem.com/1627729" class="btn-sm-full tw-bg rectangle waves-effect waves-light wow fadeInUp" data-wow-delay="0.1s"><i class="socicon-modelmayhem"> </i> <span>Model Mayhem</span></a>
+                
+            >
+            </div>
+        </div>
+        <!--/.Footer Content-->
+
+        <!--Coprytights-->
+        <div class="footer-copyright text-center rgba-black-light wow fadeIn">
+            <div class="container-fluid">
+                © 2016 Copyright: Z Photography
+            </div>
+        </div>
+        <!--/.Coprytights-->
+    </footer>
+    <!--/.Section: Footer-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Material Design Bootstrap -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+
+    <!-- Smooth scroll -->
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+
+    <!--Google Maps-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+        function init_map() {
+            var var_location = new google.maps.LatLng(38.2527, -85.7585);
+
+            var var_mapoptions = {
+                center: var_location,
+                zoom: 14
+            };
+
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: "Louisville"
+            });
+
+            var var_map = new google.maps.Map(document.getElementById("map-container"),
+                var_mapoptions);
+
+            var_marker.setMap(var_map);
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+
+    <!--WOW effect initialization-->
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        // Initialize collapse button
+        $(".button-collapse").sideNav();
+        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+        $('.collapsible').collapsible();
+    </script>
+
+</body>
+
+</html>
